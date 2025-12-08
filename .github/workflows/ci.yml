@@ -1,18 +1,7 @@
 name: CI
 
 on:
-  push:
-    branches:
-     - main
-     - next
-     - 'v*'
-    paths-ignore:
-      - 'docs/**'
-      - '*.md'
-  pull_request:
-    paths-ignore:
-      - 'docs/**'
-      - '*.md'
+  workflow_dispatch:
 
 # This allows a subsequently queued workflow run to interrupt previous runs
 concurrency:
@@ -26,7 +15,7 @@ jobs:
   dependency-review:
     name: Dependency Review
     if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, monkci-runners-8vcpu]
     permissions:
       contents: read
     steps:
@@ -40,7 +29,7 @@ jobs:
 
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, monkci-runners-8vcpu]
     permissions:
       contents: read
     strategy:
@@ -74,7 +63,7 @@ jobs:
     permissions:
       pull-requests: write
       contents: write
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, monkci-runners-8vcpu]
     steps:
       - uses: fastify/github-action-merge-dependabot@1b2ed42db8f9d81a46bac83adedfc03eb5149dff # v3.11.2
         with:
