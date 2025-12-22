@@ -20,7 +20,7 @@ permissions:
 jobs:
   build:
     name: Build
-    runs-on: [self-hosted, monkci-runners-8vcpu]
+    runs-on: depot-ubuntu-24.04
     permissions:
       contents: write
     steps:
