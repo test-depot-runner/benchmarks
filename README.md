@@ -70,33 +70,33 @@ node ./benchmark [arguments (optional)]
 > You can also extend the comparison table with percentage values based on fastest result; `benchmark compare -p`
 # Benchmarks
 
-* __Machine:__ linux x64 | 2 vCPUs | 7.6GB Mem
+* __Machine:__ linux x64 | 4 vCPUs | 15.3GB Mem
 * __Node:__ `v20.19.6`
-* __Run:__ Mon Dec 22 2025 14:38:25 GMT+0000 (Coordinated Universal Time)
+* __Run:__ Wed Dec 24 2025 09:08:59 GMT+0000 (Coordinated Universal Time)
 * __Method:__ `autocannon -c 100 -d 40 -p 10 localhost:3000` (two rounds; one to warm-up, one to measure)
 
 |                          | Version  | Router | Requests/s | Latency (ms) | Throughput/Mb |
 | :--                      | --:      | --:    | :-:        | --:          | --:           |
-| node-http                | v20.19.6 | ✗      | 166883.2   | 5.54         | 29.76         |
-| polka                    | 0.5.2    | ✓      | 164307.2   | 5.60         | 29.30         |
-| connect                  | 3.7.0    | ✗      | 159155.2   | 5.78         | 28.38         |
-| fastify                  | 5.6.2    | ✓      | 158537.6   | 5.80         | 28.42         |
-| connect-router           | 2.2.0    | ✓      | 152985.6   | 6.03         | 27.28         |
-| micro                    | 10.0.1   | ✗      | 151488.0   | 6.08         | 27.01         |
-| restana                  | v5.1.0   | ✓      | 149875.2   | 6.18         | 26.73         |
-| adonisjs                 | 7.7.0    | ✓      | 137924.0   | 6.79         | 24.60         |
-| whatwg-node-server       | 0.10.17  | ✗      | 137562.4   | 6.82         | 24.53         |
-| hono                     | 4.11.1   | ✓      | 134482.4   | 6.96         | 22.06         |
-| restify                  | 11.1.0   | ✓      | 124014.4   | 7.56         | 22.35         |
-| koa                      | 3.1.1    | ✗      | 118710.4   | 7.97         | 21.17         |
-| 0http                    | 4.3.0    | ✓      | 114569.6   | 8.23         | 20.43         |
-| koa-router               | 14.0.0   | ✓      | 110340.8   | 8.53         | 19.68         |
-| microrouter              | 3.1.3    | ✓      | 109638.4   | 8.61         | 19.55         |
-| hapi                     | 21.4.4   | ✓      | 106561.6   | 8.86         | 19.00         |
-| h3                       | 1.15.4   | ✗      | 102812.8   | 9.23         | 18.34         |
-| h3-router                | 1.15.4   | ✓      | 98763.2    | 9.63         | 17.61         |
-| srvx                     | 0.9.8    | ✗      | 72620.8    | 13.26        | 14.13         |
-| fastify-big-json         | 5.6.2    | ✓      | 28177.2    | 35.00        | 324.22        |
-| express                  | 5.2.1    | ✓      | 25509.6    | 38.69        | 4.55          |
-| express-with-middlewares | 5.2.1    | ✓      | 23137.6    | 42.71        | 8.61          |
-| trpc-router              | 11.8.1   | ✓      | 14445.2    | 68.70        | 3.18          |
+| node-http                | v20.19.6 | ✗      | 169724.8   | 5.43         | 30.27         |
+| connect                  | 3.7.0    | ✗      | 168691.2   | 5.48         | 30.08         |
+| polka                    | 0.5.2    | ✓      | 167510.4   | 5.52         | 29.87         |
+| fastify                  | 5.6.2    | ✓      | 163990.4   | 5.60         | 29.40         |
+| micro                    | 10.0.1   | ✗      | 156172.8   | 5.89         | 27.85         |
+| connect-router           | 2.2.0    | ✓      | 155664.0   | 5.92         | 27.76         |
+| adonisjs                 | 7.7.0    | ✓      | 144124.8   | 6.34         | 25.70         |
+| whatwg-node-server       | 0.10.17  | ✗      | 143808.0   | 6.56         | 25.64         |
+| hono                     | 4.11.1   | ✓      | 138220.8   | 6.84         | 22.68         |
+| 0http                    | 4.3.0    | ✓      | 135368.8   | 6.89         | 24.14         |
+| restana                  | v5.1.0   | ✓      | 128256.0   | 7.29         | 22.87         |
+| koa                      | 3.1.1    | ✗      | 123145.6   | 7.71         | 21.96         |
+| restify                  | 11.1.0   | ✓      | 122136.0   | 7.75         | 22.02         |
+| h3                       | 1.15.4   | ✗      | 119305.6   | 7.89         | 21.27         |
+| h3-router                | 1.15.4   | ✓      | 116980.8   | 8.05         | 20.86         |
+| microrouter              | 3.1.3    | ✓      | 113451.2   | 8.40         | 20.23         |
+| koa-router               | 14.0.0   | ✓      | 113278.4   | 8.29         | 20.20         |
+| hapi                     | 21.4.4   | ✓      | 109508.8   | 8.57         | 19.53         |
+| srvx                     | 0.9.8    | ✗      | 70792.0    | 13.66        | 13.77         |
+| fastify-big-json         | 5.6.2    | ✓      | 29464.4    | 33.43        | 339.02        |
+| express                  | 5.2.1    | ✓      | 27714.4    | 35.56        | 4.94          |
+| express-with-middlewares | 5.2.1    | ✓      | 24520.4    | 40.26        | 9.12          |
+| trpc-router              | 11.8.1   | ✓      | 16005.4    | 61.95        | 3.53          |
